@@ -4,4 +4,4 @@ const asyncHandler = (requestHandler) =>{  //This is a higher-order function: a 
         catch((err) => next (err))  //If the requestHandler throws an error or the Promise is rejected, this .catch catches it.The error is passed to next(err), which is how Express forwards errors to your error-handling middleware.        
     }
 }
-export {asyncHandler}
+export default asyncHandler
