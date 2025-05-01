@@ -15,7 +15,8 @@ import fs from "fs"
                 resource_type: "auto"
             }) 
             // file has been uploaded successfuly
-            console.log("file has been uploaded successfuly" , response.url);
+            // console.log("file has been uploaded successfuly" , response.url);
+            fs.unlinkSync(localFilePath)
             return response
         } catch (error) {
             fs.unlinkSync(localFilePath) // remove the file store locally as the upload operation got failed
